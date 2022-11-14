@@ -1,4 +1,6 @@
 #pragma once
+#include <bits/stdc++.h>
+using namespace std;
 
 enum suit_t
 {
@@ -16,15 +18,8 @@ private:
     char numberValue;
 
 public:
-    card(/* args */);
-    ~card();
-    int cardValue();
+    Card(suit_t _suit, char _numberValue);
+    ~Card();
+    int value();
+    string toString();
 };
-
-card::card(/* args */)
-{
-}
-
-card::~card()
-{
-}

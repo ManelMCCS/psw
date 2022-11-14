@@ -1,21 +1,26 @@
+#pragma once
+
+#include "card.h"
+
 class Hand
 {
 private:
     int value;
     int cardsNumber;
-    Card *cardList;
+    bool haveAce;
+    // Card *cardList;
 public:
-    hand(/* args */);
-    ~hand();
+    // Hand(/* args */);
+    // ~Hand();
     int getScore();
     bool resolveScore();
-    void updateCards();
+    void takeCard(Card newCard);
 };
 
-hand::hand(/* args */)
-{
-}
+// Hand::Hand(/* args */)
+// {
+// }
 
-hand::~hand()
-{
-}
+// Hand::~Hand()
+// {
+// }

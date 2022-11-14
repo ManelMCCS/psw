@@ -1,23 +1,20 @@
 #pragma once
+#include "card.h"
+#include <bits/stdc++.h>
+using namespace std;
 
-class shoe
+class Shoe
 {
 private:
-    int numberOfDecks = 6;
-    Card **decksList;
+    vector<Card> cardsList;
 
 public:
-    shoe(/* args */);
-    ~shoe();
+    Shoe();
+    ~Shoe();
+    void showShoe();
     void shuffle();
     Card drawCard();
     
 };
 
-shoe::shoe(/* args */)
-{
-}
 
-shoe::~shoe()
-{
-}

@@ -12,8 +12,8 @@ private:
     Hand dealersHand;
 
 public:
-    game(/* args */);
-    ~game();
+    Game();
+    ~Game();
     void start();
     void hit();
     void split();
@@ -22,10 +22,4 @@ public:
     void doubleDown();
 };
 
-game::game(/* args */)
-{
-}
 
-game::~game()
-{
-}
