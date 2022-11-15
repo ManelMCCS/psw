@@ -14,7 +14,7 @@ Shoe::Shoe()
     int numberOfDecks = 1;
     
     suit_t suit_list[] = {HEART, SPADE, CLUB, DIAMOND};
-    char valuesList[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
+    char valuesList[] = {ACE, '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
 
     int shoe_index = 0;
     for(int decks_index = 0; decks_index < numberOfDecks; decks_index++){
@@ -39,7 +39,8 @@ void Shoe::shuffle() {
 
 Card Shoe::drawCard() {
     
-    Card dummyCard(HEART,'2');
+    Card dummyCard = cardsList.back();
+    cardsList.pop_back();
     
     return dummyCard;
 }

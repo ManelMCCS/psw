@@ -11,14 +11,31 @@ enum suit_t
     DIAMOND
 };
 
+enum rank_t
+{
+    RANK_ERROR = 0,
+    ACE = 1,
+    TWO,
+    THREE,
+    FOUR,
+    FIVE,
+    SIX,
+    SEVEN,
+    EIGHT,
+    NINE,
+    TEN,
+    JACK,
+    QUEEN,
+    KING
+};
+
 class Card
 {
 private:
     suit_t suit;
-    char numberValue;
-
+    rank_t rank;
 public:
-    Card(suit_t _suit, char _numberValue);
+    Card(suit_t _suit, rank_t _rank);
     ~Card();
     int value();
     string toString();
