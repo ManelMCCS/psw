@@ -18,49 +18,49 @@ int Card::value(){
 string Card::toString(){
     string ret;
 
-    // switch (this->rank) {
-    //     case ACE:
-    //         ret.append("ACE");
-    //         break;
-    //     case TWO:
-    //         ret = "TWO";
-    //         break;
-    //     case THREE:
-    //         ret = "THREE";
-    //         break;
-    //     case FOUR:
-    //         ret = "FOUR";
-    //         break;
-    //     case FIVE:
-    //         ret = "FIVE";
-    //         break;
-    //     case SIX:
-    //         ret = "SIX";
-    //         break;
-    //     case SEVEN:
-    //         ret = "SEVEN";
-    //         break;
-    //     case EIGHT:
-    //         ret = "EIGHT";
-    //         break;
-    //     case NINE:
-    //         ret = "NINE";
-    //         break;
-    //     case TEN:
-    //         ret = "TEN";
-    //         break;
-    //     case JACK:
-    //         ret = "JACK";
-    //         break;
-    //     case QUEEN:
-    //         ret = "QUEEN";
-    //         break;
-    //     case KING:
-    //         ret = "KING";
-    //         break;
-    // }
+    switch (this->rank) {
+        case ACE:
+            ret.append("ACE");
+            break;
+        case TWO:
+            ret = "TWO";
+            break;
+        case THREE:
+            ret = "THREE";
+            break;
+        case FOUR:
+            ret = "FOUR";
+            break;
+        case FIVE:
+            ret = "FIVE";
+            break;
+        case SIX:
+            ret = "SIX";
+            break;
+        case SEVEN:
+            ret = "SEVEN";
+            break;
+        case EIGHT:
+            ret = "EIGHT";
+            break;
+        case NINE:
+            ret = "NINE";
+            break;
+        case TEN:
+            ret = "TEN";
+            break;
+        case JACK:
+            ret = "JACK";
+            break;
+        case QUEEN:
+            ret = "QUEEN";
+            break;
+        case KING:
+            ret = "KING";
+            break;
+    }
 
-    ret.append(" of");
+    ret.append(" OF");
 
     switch (this->suit) {
         case DIAMOND:

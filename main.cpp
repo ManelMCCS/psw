@@ -7,14 +7,16 @@
 int main(void) {
     printf("welcome \n");
     Shoe mainShoe;
+    mainShoe.shuffle();
     Card obj1 = mainShoe.drawCard();
-    // mainShoe.showShoe();
-    // mainShoe.shuffle();
     Card obj2 = mainShoe.drawCard();
-    Card obj3 = mainShoe.drawCard();
     cout << obj1.toString() << '\n';
     cout << obj2.toString() << '\n';
-    cout << obj3.toString() << '\n';
-    // mainShoe.showShoe();
+
+    // // mainShoe.showShoe();
+    // Card obj3 = mainShoe.drawCard();
+
+    // cout << obj3.toString() << '\n';
+    // // mainShoe.showShoe();
 
 }

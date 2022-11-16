@@ -1,5 +1,8 @@
 #pragma once
 
+#ifned HAND_H
+#define HAND_H
+
 #include "card.h"
 
 class Hand
@@ -7,20 +10,28 @@ class Hand
 private:
     int value;
     int cardsNumber;
-    bool haveAce;
-    // Card *cardList;
+    Card *cardList;
 public:
-    // Hand(/* args */);
-    // ~Hand();
+    Hand(/* args */);
+    ~Hand();
+    /**
+     * @brief diz a pontuçao atual da mao
+     * 
+     * @return int 
+     */
     int getScore();
-    bool resolveScore();
+   /**
+    * @brief  
+    * 
+    * @return true 
+    * @return false 
+    */
+    bool resolveScore(bool ace_is_eleven);
+    /**
+     * @brief 
+     * 
+     * @param newCard 
+     */
     void takeCard(Card newCard);
 };
 
-// Hand::Hand(/* args */)
-// {
-// }
-
-// Hand::~Hand()
-// {
-// }
