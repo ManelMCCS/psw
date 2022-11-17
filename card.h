@@ -58,4 +58,5 @@ public:
      * @return string com o conteudo da carta 
      */
     string toString();
+    rank_t get_rank();
 };

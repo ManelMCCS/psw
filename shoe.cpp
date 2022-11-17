@@ -4,7 +4,7 @@
 // {
     
 //     list<Card>::iterator it;
-//     for (it = cardsList.begin(); it != cardsList.end(); ++it)
+//     for (it = cards_vector.begin(); it != cards_vector.end(); ++it)
 //         cout << it->toString() <<endl;
 //     cout << '\n';
 // }
@@ -19,7 +19,7 @@ Shoe::Shoe()
             for(int rank_iterator = ACE; rank_iterator != RANK_END; rank_iterator++) {
                 Card cardObj(suit_list[suits_index], (rank_t)rank_iterator);
                 // cout << cardObj.toString() <<"\n";
-                cardsList.push_back(cardObj);
+                cards_vector.push_back(cardObj);
             }
         }
     }
@@ -35,14 +35,32 @@ int my_radom_function(int i) {
 
 void Shoe::shuffle() {
     std::srand ( unsigned ( std::time(0) ) );
-    random_shuffle(cardsList.begin(), cardsList.end(), my_radom_function);
+    random_shuffle(cards_vector.begin(), cards_vector.end(), my_radom_function);
     return;
 }
 
 Card Shoe::drawCard() {
     
-    Card cart_to_draw = cardsList.back();
-    cardsList.pop_back();
+    Card cart_to_draw = cards_vector.back();
+    cards_vector.pop_back();
     
     return cart_to_draw;
+}
+string Shoe::to_string() {
+
+    string cards_s;
+    string aux_s;
+
+    vector<Card>::iterator it;
+    for (it = this->cards_vector.begin(); it != this->cards_vector.end(); ++it) {
+        aux_s = it->toString();
+        cards_s.append(aux_s);
+        cards_s.append("; ");
+    }
+
+    return cards_s;
+}
+
+int Shoe::size() {
+    return this->cards_vector.size();
 }

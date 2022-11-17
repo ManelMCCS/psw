@@ -4,22 +4,28 @@
 #include "shoe.h"
 #include "hand.h"
 
+enum GAME_RESULT {
+    ERROR_RESULT = 0,
+    PLAYER_WINS,
+    DEALER_WINS,
+    PLAYER_BUSTED,
+    DEALER_BUSTED
+}
+
 class Game
 {
 private:
-    Player player;
-    Shoe shoe;
-    Hand dealersHand;
+    Player user;
 
 public:
     Game();
     ~Game();
     void start();
-    void hit();
-    void split();
-    void stand();
-    void giveUp();
-    void doubleDown();
+    
+    void play(); // starts a new table, plays the game and in the end update the user balance with the game result 
+    
+    void menu_start();
+    void rules();
 };
 
 

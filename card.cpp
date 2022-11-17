@@ -78,3 +78,7 @@ string Card::toString(){
     }
     return ret;
 }
+
+rank_t Card::get_rank() {
+    return this->rank;
+}

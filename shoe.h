@@ -8,7 +8,7 @@ using namespace std;
 class Shoe
 {
 private:
-    vector<Card> cardsList;
+    vector<Card> cards_vector;
 
 public:
     /**
@@ -24,6 +24,8 @@ public:
     void showShoe();
     void shuffle();
     Card drawCard();
+    string to_string();
+    int size();
     
 };
 

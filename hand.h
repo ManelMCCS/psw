@@ -1,16 +1,15 @@
 #pragma once
-
-#ifned HAND_H
-#define HAND_H
-
 #include "card.h"
+#include "shoe.h"
+#include <bits/stdc++.h>
+#include "cli_interface.h"
+using namespace std;
 
 class Hand
 {
 private:
-    int value;
-    int cardsNumber;
-    Card *cardList;
+    int score;
+    vector<Card> cards_vector;
 public:
     Hand(/* args */);
     ~Hand();
@@ -19,19 +18,20 @@ public:
      * 
      * @return int 
      */
-    int getScore();
+    int get_score();
    /**
     * @brief  
     * 
     * @return true 
     * @return false 
     */
-    bool resolveScore(bool ace_is_eleven);
+    int resolve_score();
     /**
      * @brief 
      * 
      * @param newCard 
      */
-    void takeCard(Card newCard);
+    Card takeCard(Shoe *shoe);
+    string to_string();
 };
 
