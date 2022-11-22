@@ -39,7 +39,7 @@ void Shoe::shuffle() {
     return;
 }
 
-Card Shoe::drawCard() {
+Card Shoe::draw_card() {
     
     Card cart_to_draw = cards_vector.back();
     cards_vector.pop_back();
@@ -53,7 +53,7 @@ string Shoe::to_string() {
 
     vector<Card>::iterator it;
     for (it = this->cards_vector.begin(); it != this->cards_vector.end(); ++it) {
-        aux_s = it->toString();
+        aux_s = it->to_string();
         cards_s.append(aux_s);
         cards_s.append("; ");
     }

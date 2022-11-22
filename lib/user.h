@@ -1,25 +1,8 @@
 #pragma once
 
-#include "hand.h"
-#include <bits/stdc++.h>
+#include "player.h"
 using namespace std;
 
-class Player
-{
-private:
-    Hand hand;
-    int bet;
-public:
-    Player(/* args */);
-    ~Player();
-    
-    void hit();
-    void stand();
-    
-    void split();
-    void giveUp();
-    void doubleDown();
-};
 
 class User
 {
@@ -33,6 +16,8 @@ private:
 public:
     User(/* args */);
     ~User();
+
+    Player get_player();
     
     bool changePassword();
     bool changeEmail();
@@ -40,4 +25,3 @@ public:
     bool addMoney(int amount);
     bool retireMoney(int amount);
 };
-

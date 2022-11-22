@@ -10,12 +10,7 @@ Card::~Card()
 {
 }
 
-int Card::value(){
-    
-    return rank;
-}
-
-string Card::toString(){
+string Card::to_string(){
     string ret;
 
     switch (this->rank) {

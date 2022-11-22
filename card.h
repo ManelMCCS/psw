@@ -1,17 +1,24 @@
 #pragma once
-#include <bits/stdc++.h>
-#include <cstdlib>
-using namespace std;
 
+/**
+ * @brief Enumeration of the diferent suits in a deck of cards. The integer value given by the enumeration has no meaming.
+ * 
+ */
 enum suit_t
 {
     SUITE_ERROR = 0,
-    HEART,
-    SPADE,
-    CLUB,
-    DIAMOND
+    HEARTS,
+    SPADES,
+    CLUBS,
+    DIAMONDS,
+    SUIT_END
 };
 
+/**
+ * @brief Enumeration of the diferent ranks in a deck of cards.
+ * The integer value given by the enumeration is only equivalent to the game value of the rank between ACE and TEN, since the figures value is alaqays 10.
+ * 
+ */
 enum rank_t
 {
     RANK_ERROR = 0,
@@ -31,32 +38,44 @@ enum rank_t
     RANK_END
 };
 
+/**
+ * @brief Object representing the a convetional playing card.
+ * 
+ */
 class Card
 {
 private:
+    /**
+     * @brief Suit of the object representing a card.
+     * 
+     */
     suit_t suit;
+        /**
+     * @brief Rank/Value of the object representing a card.
+     * 
+     */
     rank_t rank;
 public:
     /**
-     * @brief Construct a new Card object
+     * @brief Construct a new Card object with the given rank and suit.
      * 
-     * @param _suit naipe 
-     * @param _rank valor 
+     * @param _suit card suit
+     * @param _rank card rank 
 
      */
     Card(suit_t _suit, rank_t _rank);
-    ~Card();
     /**
-     * @brief retorna um inteiro com o valor da carta 
+     * @brief Return the rank of the Card.
      * 
-     * @return int 
+     * @return rank_t 
      */
-    int value();
+    rank_t get_rank();
+    
+    // Auxiliary methods
     /**
      * @brief 
      * 
      * @return string com o conteudo da carta 
      */
-    string toString();
-    rank_t get_rank();
+    string to_string();
 };
